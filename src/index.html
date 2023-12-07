@@ -153,12 +153,24 @@
                 <a href="./index.html">Contact Us</a>
               </li>
 
-              <li class="block md:hidden py-4 w-full bg-[#3D73B3] text-white">
+              <li
+                class="block md:hidden py-4 w-full bg-[#3D73B3] text-white"
+                type="button"
+                data-te-toggle="modal"
+                data-te-target="#exampleModalCenteredScrollable"
+                data-te-ripple-init
+                data-te-ripple-color="light"
+              >
                 <a href="./login">Book appointment</a>
               </li>
             </ul>
             <button
-              class="bg-[#3D73B3] text-[16px] text-white px-2 lg:px-8 shadow md:py-2 lg:py-3 rounded-md lg:text-base font-[700]"
+              class="bg-[#3D73B3] text-[16px] text-white px-2 lg:px-8 shadow md:py-2 lg:py-3 rounded-md lg:text-base font-[700] transition duration-150 ease-in-out"
+              type="button"
+              data-te-toggle="modal"
+              data-te-target="#exampleModalCenteredScrollable"
+              data-te-ripple-init
+              data-te-ripple-color="light"
             >
               Book appointment
             </button>
@@ -199,29 +211,17 @@
       </div>
     </nav>
 
-    <!-- <video
-      autoplay
-      loop
-      muted
-      class="z-10 w-[120vw] my-0 min-h-[780px] max-h-[780px] max-w-full"
-    >
-      <source
-        src="https://s3-figma-videos-production-sig.figma.com/video/1138506253348710682/TEAM/3c8f/a608/-17b6-44ec-a302-4a55c5bfedfe?Expires=1702857600&Signature=JNz3DElDRtrCFwJRX0vZgpeD2m9QDSQ~anDVXYX-y8xTHicF1uJSfhpgDXXJzi~Gvwc7JqMs9GiqL2act9bnPEs5p6jka-XY7owxYUZWPQqnPeOh-AIIiYAFrOmcVe2i2MbQ5Q7LfqQTfr7oTZJTsUiTPCrdljhGzYixjrA1Ig9n2JnPW8D4YB5Yo4gYWRqwDFMRfHIIqSSJXHI~UjZL1dOnFcOY2KYFq8MCCou7eyBAmQ2mWMno2fcA9e19UdziKV2TTthDSb7jau391P0l2Oth-y-~dVQg-rajjTP2e083CC3q3Le2sCnIqPTN48FgGIJUDlYtpNP9WQkGOO5FFA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-        type="video/mp4"
-      />
-      Your browser does not support the video tag.
-    </video> -->
-    <div class="w-full h-[675px] relative">
-      <img
-        class="w-full h-full"
-        src="./asset/hero.png"
-        alt="surgeons-performing-an-operation"
-      />
+    <div class="w-full h-full relative">
+      <div class="m-0 p-0">
+        <video autoplay loop muted class="z-10 bg-white">
+          <source src="./asset/herovideo.mp4" type="video/mp4" />
+        </video>
+        <div
+          class="absolute top-0 h-full w-full opacity-20 bg-gradient-to-r from-black to-black"
+        ></div>
+      </div>
       <div
-        class="absolute top-0 h-full w-full opacity-20 bg-gradient-to-r from-black to-black"
-      ></div>
-      <div
-        class="absolute w-[40%] justify-start items-start gap-3.5 inline-flex flex-col top-36 left-24 text-white"
+        class="absolute md:w-[40%] justify-start items-start gap-3.5 inline-flex flex-col top-36 left-24 text-white"
       >
         <div
           class="text-white leading-[50.2px] font-bold text-3xl md:text-4xl [text-wrap:balance] bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 to-50% to-slate-200"
@@ -239,7 +239,6 @@
               <li>Dental Services</li>
               <li>Neurosurgery</li>
 
-
               <li aria-hidden="true">Dental Services</li>
             </ul>
           </span>
@@ -253,7 +252,12 @@
           neuro...
         </div>
         <button
-          class="w-52 h-12 px-8 py-3.5 shadow bg-[#3D73B3] rounded-md justify-center items-center gap-2.5 inline-flex"
+          class="px-8 py-3.5 shadow bg-[#3D73B3] rounded-md justify-center items-center gap-2.5 inline-flex"
+          type="button"
+          data-te-toggle="modal"
+          data-te-target="#exampleModalCenteredScrollable"
+          data-te-ripple-init
+          data-te-ripple-color="light"
         >
           <p class="text-center text-white text-base font-bold font-['Mulish']">
             Book appointment
@@ -262,11 +266,199 @@
       </div>
     </div>
     <div
-      class="flex flex-row w-[65%] mx-auto justify-between items-center pt-20"
+      data-te-modal-init
+      class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+      id="exampleModalCenteredScrollable"
+      tabindex="-1"
+      aria-labelledby="exampleModalCenteredScrollableLabel"
+      aria-modal="true"
+      role="dialog"
     >
-      <div class="w-[306px] h-[1px] bg-[#C8C8C8]"></div>
-      <p class="font-[700] text-[30px] leading-[37.65px]">Solutions We Offer</p>
-      <div class="w-[306px] h-[1px] bg-[#C8C8C8]"></div>
+      <div
+        data-te-modal-dialog-ref
+        class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]"
+      >
+        <div
+          class="pointer-events-auto relative flex w-full flex-col rounded-[6px] border-none bg-white bg-clip-padding text-current shadow outline-none dark:bg-neutral-600"
+        >
+          <div class="flex flex-col items-end w-full py-2 px-2 justify-end">
+            <button
+              type="button"
+              class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
+              data-te-modal-dismiss
+              aria-label="Close"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="close">
+                  <path
+                    id="Vector"
+                    d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+                    fill="black"
+                  />
+                </g>
+              </svg>
+            </button>
+          </div>
+          <div
+            class="flex flex-shrink-0 items-center justify-between border-opacity-100 px-8 dark:border-opacity-50"
+          >
+            <!--Modal title-->
+            <div>
+              <p class="text-[#383F46] text-2xl font-bold font-['Mulish']">
+                Send us a message
+              </p>
+              <p
+                class="text-[#7B7C7F] text-base border-[#F5F5F5] border-b-[0.5px] py-3 font-normal font-['Mulish'] leading-normal"
+              >
+                Need urgent response? Send us a message today and we would
+                respond to you immediately
+              </p>
+            </div>
+            <!--Close button-->
+          </div>
+
+          <!--Modal body-->
+          <div
+            class="relative flex-col justify-start items-start gap-3 inline-flex px-8 pt-4"
+          >
+            <label
+              class="text-base pt-2 text-[#8692A6] font-normal font-['Mulish']"
+              >Your full name*</label
+            >
+            <input
+              type="text"
+              class="w-full border-[1px] border-[#BDBDBD] py-3 px-4 placeholder:text-sm placeholder:font-normal rounded-md"
+              placeholder="Full name"
+            />
+            <label
+              class="text-base pt-2 text-[#8692A6] font-normal font-['Mulish']"
+              >Email address*</label
+            >
+            <input
+              type="text"
+              class="w-full border-[1px] border-[#BDBDBD] py-3 px-4 placeholder:text-sm placeholder:font-normal rounded-md"
+              placeholder="Email address"
+            />
+            <label
+              class="text-base pt-2 text-[#8692A6] font-normal font-['Mulish']"
+              >Telephone*</label
+            >
+            <input
+              type="text"
+              class="w-full border-[1px] border-[#BDBDBD] py-3 px-4 placeholder:text-sm placeholder:font-normal rounded-md"
+              placeholder="Email address"
+            />
+            <label
+              class="text-base pt-2 text-[#8692A6] font-normal font-['Mulish']"
+              >Treatment type*</label
+            >
+            <div class="relative w-full" data-te-dropdown-ref>
+              <button
+                class="flex items-center justify-between rounded-md border-[1px] border-[#BDBDBD] w-full px-4 py-3 font-['Mulish'] text-[14px] font-normal leading-normal text-[#8692A6] transition duration-150 ease-in-out focus:outline-none focus:ring-0"
+                type="button"
+                id="dropdownMenuButton1"
+                data-te-dropdown-toggle-ref
+                aria-expanded="false"
+                data-te-ripple-init
+                data-te-ripple-color="light"
+              >
+                Select treatment type
+                <span class="w-2 pr-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <ul
+                class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
+                aria-labelledby="dropdownMenuButton1"
+                data-te-dropdown-menu-ref
+              >
+                <li>
+                  <a
+                    class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                    href="#"
+                    data-te-dropdown-item-ref
+                    >Action</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                    href="#"
+                    data-te-dropdown-item-ref
+                    >Another action</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                    href="#"
+                    data-te-dropdown-item-ref
+                    >Something else here</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <label
+              class="text-base pt-2 text-[#8692A6] font-normal font-['Mulish']"
+              >Message*</label
+            >
+            <textarea
+              type="text"
+              class="w-full h-32 py-3 resize-none border-[1px] border-[#BDBDBD] px-4 placeholder:text-sm placeholder:font-normal rounded-md"
+              placeholder="Type here"
+            ></textarea>
+          </div>
+
+          <!--Modal footer-->
+          <div
+            class="flex flex-shrink-0 flex-wrap items-start px-8 justify-start pb-10 rounded-b-md border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50"
+          >
+            <!-- <button
+              type="button"
+              class="inline-block rounded bg-primary-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover:bg-primary-accent-100 focus:bg-primary-accent-100 focus:outline-none focus:ring-0 active:bg-primary-accent-200"
+              data-te-modal-dismiss
+              data-te-ripple-init
+              data-te-ripple-color="light"
+            >
+              Close
+            </button> -->
+            <button
+              type="button"
+              class="inline-block rounded bg-[#383F46] mt-2 px-6 py-3 text-center text-white text-base font-boldleading-normal shadow transition duration-150 ease-in-out focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+              data-te-ripple-init
+              data-te-ripple-color="light"
+            >
+              Send message
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-row lg:w-[65%] md:w-[80%] mx-auto justify-between items-center pt-20"
+    >
+      <div class="lg:w-[306px] h-[1px] bg-[#C8C8C8]"></div>
+      <p class="font-[700] lg:text-[30px] leading-[37.65px]">
+        Solutions We Offer
+      </p>
+      <div class="lg:w-[306px] h-[1px] bg-[#C8C8C8]"></div>
     </div>
     <p
       class="text-center text-[#7B7C7F] text-base font-normal pt-4 pb-20 w-[35%] mx-auto leading-normal"
@@ -559,7 +751,7 @@
     >
       <div class="w-[100%] h-[35vh] relative">
         <img
-          class="w-[100%] object-none h-full"
+          class="w-[100%] object-cover h-full"
           src="./asset/organ.png"
           alt="organ_transplant_procedure"
         />
@@ -587,7 +779,7 @@
       </div>
       <div class="w-[100%] h-[35vh] relative">
         <img
-          class="object-none w-full h-full"
+          class="object-cover w-full h-full"
           src="./asset/organ.png"
           alt="organ_transplant_procedure"
         />
@@ -610,6 +802,11 @@
         </p>
         <button
           class="px-6 py-3 bg-white rounded-md shadow justify-center items-center gap-2.5 inline-flex"
+          type="button"
+          data-te-toggle="modal"
+          data-te-target="#exampleModalCenteredScrollable"
+          data-te-ripple-init
+          data-te-ripple-color="light"
         >
           <p class="text-center text-black text-base font-bold font-['Mulish']">
             Book an Appointment
@@ -752,7 +949,7 @@
           <p class="text-[14px] pt-4 font-[400] leading-[24px] text-[#cedbea]">
             THTC
           </p>
-          <p class="text-[14px]  font-[400] leading-[24px] text-[#cedbea]">
+          <p class="text-[14px] font-[400] leading-[24px] text-[#cedbea]">
             Recep Paşa Cd. NO 5 / 8 Gümüşsuyu 34437
           </p>
           <p class="text-[14px] font-[400] leading-[24px] text-[#cedbea]">
@@ -803,7 +1000,7 @@
                 </g>
               </svg>
             </span>
-            <p class="text-[14px]  font-[400] leading-[24px] text-[#cedbea]">
+            <p class="text-[14px] font-[400] leading-[24px] text-[#cedbea]">
               THTC <br />
               Recep Paşa Cd. NO 5 / 8 Gümüşsuyu 34437 TAKSIM / ISTANBUL/ TURKEY
             </p>
@@ -974,23 +1171,22 @@
             </div>
           </div>
         </div>
-
       </div>
-       <div class="w-[95%] md:w-[90%] mx-auto bg-[#474E56] h-[0.5px]"></div>
-       <div class="w-[95%] pt-4 pb-4 md:w-[90%] mx-auto flex flex-row space-x-8">
+      <div class="w-[95%] md:w-[90%] mx-auto bg-[#474E56] h-[0.5px]"></div>
+      <div class="w-[95%] pt-4 pb-4 md:w-[90%] mx-auto flex flex-row space-x-8">
         <p class="text-[16px] font-[400] leading-[24px] text-[#cedbea]">
-            Privacy Policy
-          </p>
-          <p class="text-[16px] font-[400] leading-[24px] text-[#cedbea]">
-            Cookie Policy
-          </p>
-          <p class="text-[16px] font-[400] leading-[24px] text-[#cedbea]">
-            Cookie Settings
-          </p>
-          <p class="text-[16px] font-[400] leading-[24px] text-[#cedbea]">
-            Terms & Conditions
-          </p>
-       </div>
+          Privacy Policy
+        </p>
+        <p class="text-[16px] font-[400] leading-[24px] text-[#cedbea]">
+          Cookie Policy
+        </p>
+        <p class="text-[16px] font-[400] leading-[24px] text-[#cedbea]">
+          Cookie Settings
+        </p>
+        <p class="text-[16px] font-[400] leading-[24px] text-[#cedbea]">
+          Terms & Conditions
+        </p>
+      </div>
     </div>
 
     <script src="./node_modules/preline/dist/preline.js"></script>
