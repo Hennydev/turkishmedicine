@@ -257,8 +257,8 @@
     </nav>
 
     <div class="w-full md:h-full h-[90vh] lg:mt-[74px] mt-[68px] relative">
-      <div class="m-0 p-0  ">
-        <video autoplay loop muted class="z-10 bg-white">
+      <div class="m-0 p-0 md:h-full h-[90vh]  ">
+        <video autoplay loop muted class="z-10 aspect-auto md:min-h-full !min-h-[90vh] object-cover  bg-white">
           <source src="./asset/herovideo.mp4" type="video/mp4" />
         </video>
         <div
@@ -266,14 +266,14 @@
         ></div>
       </div>
       <div
-        class="absolute md:w-[40%] justify-start items-start gap-3.5 inline-flex flex-col top-36 left-24 text-white"
+        class="absolute lg:w-[40%] w-full justify-start leading-normal  items-start md:gap-3.5 inline-flex flex-col top-24 md:top-36 md:left-5 left-4 lg:left-24 text-white"
       >
         <div
-          class="text-white leading-[50.2px] font-bold text-3xl md:text-4xl [text-wrap:balance] bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 to-50% to-slate-200"
+          class="text-white leading-[50.2px] font-bold text-[24px] md:text-4xl [text-wrap:balance] bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 to-50% to-slate-200"
         >
           Book your
           <span
-            class="text-white inline-flex flex-col h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden"
+            class="text-white inline-flex flex-col h-[calc(theme(fontSize.2xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden"
           >
             <ul
               class="block animate-text-slide text-left leading-tight [&_li]:block"
@@ -288,9 +288,9 @@
             </ul>
           </span>
         </div>
-        <p class="text-4xl font-bold text-white">Now!</p>
+        <p class="md:text-4xl text-[24px] leading-normal font-bold text-white">Now!</p>
         <div
-          class="w-[80%] text-white text-base font-normal font-['Mulish'] leading-normal"
+          class="w-[80%] text-[14px] text-white md:text-base font-normal font-['Mulish'] md:py-0 py-2 leading-normal"
         >
           Turkish neurosurgeons successfully treat dejenrative spinal disorders,
           vascular diseases of the brain and the spinal cord, hydrocephalus, and
@@ -304,7 +304,7 @@
           data-te-ripple-init
           data-te-ripple-color="light"
         >
-          <p class="text-center text-white text-base font-bold font-['Mulish']">
+          <p class="text-center text-white md:text-base text-[14px] font-bold font-['Mulish']">
             Book appointment
           </p>
         </button>
