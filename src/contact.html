@@ -26,19 +26,22 @@
     ></script>
 
     <style>
-      .scroll-container {
-        overflow-x: auto;
-        white-space: nowrap;
+      .cover {
+        padding: 0px 30px;
+        position: relative;
+        width:90
       }
-
-      .scroll-item {
-        display: inline-block;
-        min-width: 200px; /* Adjust as needed */
-        padding: 16px;
-        margin: 8px;
-        background-color: #3490dc;
-        color: #fff;
-        border-radius: 8px;
+      .left {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .right {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
       }
     </style>
   </head>
@@ -109,20 +112,20 @@
             >
               <li class="capitalize"></li>
               <li
-                class="text-sm text-[#575757] hover:underline hover:text-[#3D73B3] hover:font-[700] leading-normal font-[400]"
+                class="text-sm text-[#575757] active:underline active:text-[#3D73B3] active:font-[700] leading-normal font-[400]"
               >
                 <a href="./index.html">Home</a>
               </li>
               <li
-                class="text-sm text-[#575757] hover:underline hover:text-[#3D73B3] hover:font-[700] leading-normal font-[400]"
+                class="text-sm text-[#575757] active:underline active:text-[#3D73B3] active:font-[700] leading-normal font-[400]"
               >
-                <a href="./index.html">About Us</a>
+                <a href="./about.html">About Us</a>
               </li>
               <li
-                class="text-sm text-[#575757] hover:underline hover:text-[#3D73B3] hover:font-[700] leading-normal font-[400]"
+                class="text-sm text-[#575757] active:underline active:text-[#3D73B3] active:font-[700] leading-normal font-[400]"
               >
                 <span class="flex flex-row items-center lg:space-x-2">
-                  <a href="./index.html">Medical Treatment</a>
+                  <a href=".medical.html">Medical Treatment</a>
 
                   <svg
                     width="18"
@@ -143,14 +146,14 @@
                 </span>
               </li>
               <li
-                class="text-sm text-[#575757] hover:underline hover:text-[#3D73B3] hover:font-[700] leading-normal font-[400]"
+                class="text-sm text-[#575757] active:underline active:text-[#3D73B3] active:font-[700] leading-normal font-[400]"
               >
-                <a href="./index.html">Testimonials</a>
+              <a href="#testimonial">Testimonials</a>
               </li>
               <li
-                class="text-sm text-[#575757] hover:underline hover:text-[#3D73B3] hover:font-[700] leading-normal font-[400]"
+                class="text-sm text-[#575757] active:underline active:text-[#3D73B3] active:font-[700] leading-normal font-[400]"
               >
-                <a href="./index.html">Contact Us</a>
+                <a href="./contact">Contact Us</a>
               </li>
 
               <li
@@ -161,7 +164,7 @@
                 data-te-ripple-init
                 data-te-ripple-color="light"
               >
-                <a href="./login">Book appointment</a>
+                Book appointment
               </li>
             </ul>
             <button
@@ -222,7 +225,7 @@
           class="absolute top-0 h-full w-full opacity-50 bg-gradient-to-r from-[#3D73B3] to-[#3D73B3]"
         ></div>
         <div
-          class="absolute w-[35%] space-y-4 pb-20 justify-center items-center flex flex-col m-auto right-0 bottom-0 left-0 text-white"
+          class="absolute w-[35%] space-y-4 pb-28 justify-center items-center flex flex-col m-auto right-0 bottom-0 left-0 text-white"
         >
           <p
             class="text-white leading-[50.2px] font-bold text-3xl md:text-4xl [text-wrap:balance] bg-clip-text text-transparent"
@@ -418,9 +421,9 @@
       </div>
     </div>
     <div
-      class="md:w-[90%] flex md:flex-row flex-col py-12 mb-32 space-x-32 h-[95vh]  my-10 w-[95%] lg:w-[90%] mx-auto"
+      class="md:w-[90%] flex md:flex-row flex-col py-12 mb-32 space-x-32 h-[95vh] my-10 w-[95%] lg:w-[90%] mx-auto"
     >
-      <div class="flex flex-col w-[50%]">
+      <div class="flex flex-col md:w-[50%]">
         <div class="flex flex-row items-center space-x-6">
           <p class="text-[#383F46] text-2xl font-bold font-['Mulish']">
             Contact Information
@@ -430,7 +433,7 @@
         <div class="space-y-3 pt-8">
           <div class="flex space-x-3 h-[81px] flex-row w-full">
             <div
-              class="px-2 py-2 shadow-md w-[50%] flex flex-row space-x-3 rounded-[6px] bg-[#383F46]"
+              class="px-2 py-2 shadow-md md:w-[50%] flex flex-row space-x-3 rounded-[6px] bg-[#383F46]"
             >
               <div
                 class="w-12 h-12 bg-white bg-opacity-10 flex items-center justify-center rounded-full"
@@ -459,7 +462,7 @@
             </div>
 
             <div
-              class="px-2 py-2 shadow-md w-[50%] h-[81px] flex flex-row space-x-3 rounded-[6px] bg-[#383F46]"
+              class="px-2 py-2 shadow-md md:w-[50%] h-[81px] flex flex-col md:flex-row space-x-3 rounded-[6px] bg-[#383F46]"
             >
               <div
                 class="w-12 h-12 bg-white bg-opacity-10 flex items-center justify-center rounded-full"
@@ -564,10 +567,9 @@
         </div>
       </div>
 
-      <div class="w-[40%] relative">
-
+      <div class="md:w-[40%] w-full relative">
         <div
-          class="pointer-events-auto flex flex-col rounded-[6px]   w-full  border-none bg-white text-current shadow-md outline-none dark:bg-neutral-600"
+          class="pointer-events-auto flex flex-col rounded-[6px] w-full border-none bg-white text-current shadow-md outline-none dark:bg-neutral-600"
         >
           <div
             class="flex flex-shrink-0 items-center justify-between pt-10 border-opacity-100 px-8 dark:border-opacity-50"
@@ -703,7 +705,9 @@
               Send message
             </button>
           </div>
-                  <div class="h-[43px] w-[43px] absolute -top-5 -z-10 -left-6  rounded-full bg-[#383F46]"></div>
+          <div
+            class="h-[43px] w-[43px] absolute -top-5 -z-10 -left-6 rounded-full bg-[#383F46]"
+          ></div>
         </div>
       </div>
     </div>
@@ -963,6 +967,10 @@
         </p>
       </div>
     </div>
+
+
+
+
 
     <script src="./node_modules/preline/dist/preline.js"></script>
     <script

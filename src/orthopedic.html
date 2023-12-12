@@ -109,20 +109,20 @@
             >
               <li class="capitalize"></li>
               <li
-                class="text-sm text-[#575757] hover:underline hover:text-[#3D73B3] hover:font-[700] leading-normal font-[400]"
+                class="text-sm text-[#575757] active:underline active:text-[#3D73B3] active:font-[700] leading-normal font-[400]"
               >
                 <a href="./index.html">Home</a>
               </li>
               <li
-                class="text-sm text-[#575757] hover:underline hover:text-[#3D73B3] hover:font-[700] leading-normal font-[400]"
+                class="text-sm text-[#575757] active:underline active:text-[#3D73B3] active:font-[700] leading-normal font-[400]"
               >
-                <a href="./index.html">About Us</a>
+                <a href="./about.html">About Us</a>
               </li>
               <li
-                class="text-sm text-[#575757] hover:underline hover:text-[#3D73B3] hover:font-[700] leading-normal font-[400]"
+                class="text-sm text-[#575757] active:underline  active:text-[#3D73B3] active:font-[700] leading-normal font-[400]"
               >
-                <span class="flex flex-row items-center lg:space-x-2">
-                  <a href="./index.html">Medical Treatment</a>
+                <!-- <span class="flex flex-row items-center lg:space-x-2">
+                  <a href="./medical.html">Medical Treatment</a>
 
                   <svg
                     width="18"
@@ -140,17 +140,80 @@
                       />
                     </g>
                   </svg>
-                </span>
+                </span> -->
+
+                <div class="relative" data-te-dropdown-ref>
+                  <a
+                    class="flex flex-row items-center lg:space-x-2 transition duration-150 ease-in-out focus:outline-none focus:ring-0 motion-reduce:transition-none"
+                    href="#"
+                    type="button"
+                    id="dropdownMenuButton2"
+                    data-te-dropdown-toggle-ref
+                    aria-expanded="false"
+                    data-te-ripple-init
+                    data-te-ripple-color="light"
+                  >
+                    Medical Treatment
+
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g id="chevron-down">
+                          <path
+                            id="Vector"
+                            d="M5.5575 6.435L9 9.8775L12.4425 6.435L13.5 7.5L9 12L4.5 7.5L5.5575 6.435Z"
+                            fill="currentColor"
+                          />
+                        </g>
+                      </svg>
+
+                  </a>
+                  <ul
+                    class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden space-y-2 rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
+                    aria-labelledby="dropdownMenuButton2"
+                    data-te-dropdown-menu-ref
+                  >
+                    <li>
+                      <a
+                        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                        href="#"
+                        data-te-dropdown-item-ref
+                        >DENTAL SERVICES</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                        href="#"
+                        data-te-dropdown-item-ref
+                        >OTHOPEDIC TREATMENT</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                        href="#"
+                        data-te-dropdown-item-ref
+                        >ORGAN TRANSPLANT</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li
-                class="text-sm text-[#575757] hover:underline hover:text-[#3D73B3] hover:font-[700] leading-normal font-[400]"
+                class="text-sm text-[#575757] active:underline active:text-[#3D73B3] active:font-[700] leading-normal font-[400]"
               >
-                <a href="./index.html">Testimonials</a>
+                <a href="#testimonial">Testimonials</a>
               </li>
               <li
-                class="text-sm text-[#575757] hover:underline hover:text-[#3D73B3] hover:font-[700] leading-normal font-[400]"
+                class="text-sm text-[#575757] active:underline active:text-[#3D73B3] active:font-[700] leading-normal font-[400]"
               >
-                <a href="./index.html">Contact Us</a>
+                <a href="./contact.html">Contact Us</a>
               </li>
 
               <li
@@ -161,7 +224,7 @@
                 data-te-ripple-init
                 data-te-ripple-color="light"
               >
-                <a href="./login">Book appointment</a>
+                Book appointment
               </li>
             </ul>
             <button
@@ -439,7 +502,7 @@
       </div>
       <div class="pt-2">
         <p
-          class="text-[#7B7C7F] text-base font-normal font-['Mulish']  leading-normal"
+          class="text-[#7B7C7F] text-base font-normal font-['Mulish'] leading-normal"
         >
           Arthroscopic and robotic surgery is widely used in the diagnosis and
           treatment of diseases and injuries occurring within the joint.
@@ -454,7 +517,11 @@
           successfully performed by Turkish orthopedists at a time to suit you.
         </p>
 
-        <p class="pt-4 text-[#7B7C7F] text-base font-normal font-['Mulish'] leading-normal ">Most frequent orthopedic procedures:</p>
+        <p
+          class="pt-4 text-[#7B7C7F] text-base font-normal font-['Mulish'] leading-normal"
+        >
+          Most frequent orthopedic procedures:
+        </p>
         <ul
           class="text-[#7B7C7F] text-base font-normal font-['Mulish'] leading-normal list-inside"
         >
